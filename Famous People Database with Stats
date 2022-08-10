@@ -1,0 +1,35 @@
+-Create database for Famous People.
+
+CREATE TABLE Famous_people (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, birthdate TEXT, occupation INTEGER);
+
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Ryan", "Reynolds", "11-12-1983", 1);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Ihas", "Cupquake", "06-23-1995", 3);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Leo", "DaVinci", "10-02-1869", 4);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Star", "Lord", "08-23-1999", 2);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Ghost", "Face", "10-31-1989", 5);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Iron", "Man", "03-25-1982", 2);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Chris", "Pratt", "12-1-1997", 1);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Mark", "Iplier", "06-28-1992", 3);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Freddy", "Kreuger", "01-09-1971", 5);
+INSERT INTO Famous_people (first_name, last_name, birthdate, occupation) VALUES("Ilya", "Krushev", "04-01-2002", 4);
+
+-Select all from database.
+
+SELECT * FROM Famous_People;
+
+-Create table of Professions for Famous People
+
+CREATE TABLE Professions (id INTEGER PRIMARY KEY, title TEXT);
+
+INSERT INTO Professions VALUES(1, "Actor");
+INSERT INTO Professions VALUES(2, "Superhero");
+INSERT INTO Professions VALUES(3, "Youtuber");
+INSERT INTO Professions VALUES(4, "Artist");
+INSERT INTO Professions VALUES(5, "Slasher");
+
+-Select first name, last name, and lastly professions labeled as 'occupation' by joining the professions table and order by title.
+SELECT Famous_people.first_name , Famous_people.last_name, Professions.title as occupation FROM Famous_people
+    JOIN Professions 
+    ON Famous_people.occupation = Professions.id
+    ORDER BY title;
+    
