@@ -1,0 +1,27 @@
+-Create database for twitch.
+
+CREATE TABLE twitch (id INTEGER PRIMARY KEY AUTOINCREMENT, stream_name TEXT, stream_date TEXT, stream_duration TEXT, viewer_count NUMERIC, gifted_subs NUMERIC);
+
+
+INSERT INTO twitch (stream_name, stream_date, stream_duration, viewer_count, gifted_subs) VALUES("ghost_hunting", "04-23-2021", "4:01", 43, 7);
+INSERT INTO twitch (stream_name, stream_date, stream_duration, viewer_count, gifted_subs) VALUES("valorant!","04-30-2021", "6:39", 52, 18);
+INSERT INTO twitch (stream_name, stream_date, stream_duration, viewer_count, gifted_subs) VALUES("phasmophobia!", "05-07-2021", "8:02", 76, 90);
+INSERT INTO twitch (stream_name, stream_date, stream_duration, viewer_count, gifted_subs) VALUES("GTFO w/ Friends!", "05-14-2021", "12:49", 386, 201);
+INSERT INTO twitch (stream_name, stream_date, stream_duration, viewer_count, gifted_subs) VALUES("test stream!", "05-17-2021", ":39", 2, 0);
+
+-Select all from database.
+SELECT * FROM twitch;
+
+-Update the database by changing the streamdate with the id of 5.
+UPDATE twitch SET stream_date = "05-21-2021" WHERE id = 5;
+
+-Check update by selecting all from database.
+SELECT * FROM twitch;
+
+-Delete the row with the id of 5 from the database.
+DELETE FROM twitch WHERE id = 5;
+
+-Check delete by selecting all from the database.
+SELECT * FROM twitch;
+
+
