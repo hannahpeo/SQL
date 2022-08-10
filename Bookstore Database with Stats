@@ -1,0 +1,27 @@
+--Create a bookstore database
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, name TEXT, genre TEXT, rating INTEGER, quantity INTEGER, price INTEGER);
+
+
+INSERT INTO bookstore VALUES(1, "Beastars", "manga", 5, 22, 12.95);
+INSERT INTO bookstore VALUES(2, "Hush, Hush", "romance", 4.5, 16, 15);
+INSERT INTO bookstore VALUES(3, "A Sign Of Affection", "manga", 4, 20, 12.50);
+INSERT INTO bookstore VALUES(4, "GYO", "horror", 5, 10, 20);
+INSERT INTO bookstore VALUES(5, "Maximum Ride", "manga", 3.5, 40, 15);
+INSERT INTO bookstore VALUES(6, "Twilight", "romance", 2, 50, 25);
+INSERT INTO bookstore VALUES(7, "Cookbook from JAN", "cooking", 3.5, 10, 35);
+INSERT INTO bookstore VALUES(8, "Coloring book", "children", 5, 20, 20);
+INSERT INTO bookstore VALUES(9, "Harry Potter", "fantasy", 5, 80, 20);
+INSERT INTO bookstore VALUES(10, "Junie B Jones", "children", 1, 15, 10);
+INSERT INTO bookstore VALUES(11, "Sushi at home", "cooking", 4, 30, 25);
+INSERT INTO bookstore VALUES(12, "Percy Jackson", "fantasy", 2.5, 26, 25);
+INSERT INTO bookstore VALUES(13, "Friday the 13th", "horror", 5, 45, 30);
+INSERT INTO bookstore VALUES(14, "Ghostface", "horror", 5, 70, 20);
+INSERT INTO bookstore VALUES(15, "Avatar", "sci-fi", 5, 100, 45);
+
+
+--display database ordered by price
+SELECT * FROM bookstore ORDER BY price;
+
+--what is the total quantity of books in the store?
+SELECT SUM(quantity) FROM bookstore;
